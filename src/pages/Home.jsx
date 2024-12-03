@@ -43,7 +43,7 @@ const Home = () => {
         </Link>
       </div>
 
-      <div className="bg-zinc-100 p-4 rounded-2xl">
+      <div className="bg-zinc-100 p-4 rounded-2xl my-8">
         <Map />
       </div>
     </div>
