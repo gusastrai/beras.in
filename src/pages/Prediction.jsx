@@ -3,13 +3,20 @@ import Header from "../components/Header";
 import Chart from "../components/Chart";
 import { FaPlus } from "react-icons/fa";
 import ModalForm from "../components/ModalForm";
+import LoadingModal from "../components/LoadingModal";
+import ModalError from "../components/ModalError";
 
 function Prediction() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [predictedData, setPredictedData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleModalSubmit = async (data) => {
     setIsModalOpen(false);
+    setIsLoading(true);
+    setIsError(false);
 
     try {
       const response = await fetch(
@@ -29,14 +36,28 @@ function Prediction() {
 
       const result = await response.json();
       console.log("Hasil Prediksi:", result);
-      setPredictedData(result); 
+      setPredictedData(result);
     } catch (error) {
       console.error("Error saat mengirim data ke API:", error);
+      setErrorMessage(error.message);
+      setIsError(true);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
     <div>
+      {isLoading && <LoadingModal />}
+
+      {isError && (
+        <ModalError
+          isOpen={isError}
+          onClose={() => setIsError(false)}
+          message={errorMessage}
+        />
+      )}
+      
       <Header />
 
       <div className="flex justify-between items-center mb-8">

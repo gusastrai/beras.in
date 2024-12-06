@@ -12,15 +12,11 @@ const Cluster = () => {
       <div className="flex justify-between items-center mb-8 gap-4">
         <div>
           <h1 className="text-4xl font-semibold py-2 text-gray-800">
-            Selamat Datang Di{" "}
-            <span className="text-4xl font-bold text-gray-800">
-              Beras.<span className="font-extrabold text-cyan-500">in</span>
-            </span>
+            Pemetaan Tingkat Produksi Padi di Indonesia
           </h1>
-
           <p className="text-lg font-medium text-gray-500">
-            Analisis kebutuhan pokok beras menggunakan teknologi kecerdasan
-            buatan
+            Dengan informasi pemetaan berikut, Anda dapat melihat potensi
+            produksi padi dari setiap provinsi di Indonesia
           </p>
         </div>
         <div className="flex-1"></div>

@@ -71,6 +71,7 @@ const Chart = ({ predictedData }) => {
         },
         {
           label: "Harga Prediksi",
+          // data: new Array(actualHarga.length).fill(null).concat(predictedHarga),
           data: [...actualHarga, ...predictedHarga],
           borderColor: "rgb(255, 102, 102)",
           backgroundColor: "rgb(255, 102, 102)",
