@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-  @apply bg-gradient-to-b from-zinc-200 to-cyan-50 backdrop-blur-lg;
+  @apply bg-gradient-to-b from-slate-200 to-cyan-100 backdrop-blur-lg;
   margin: 0;
   font-family: 'Exo 2', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

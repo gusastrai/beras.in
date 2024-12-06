@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Chart from "../components/Chart";
-import { Link } from "react-router-dom";
 import { FaPlus } from "react-icons/fa";
+import ModalForm from "../components/ModalForm";
 
 function Prediction() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleModalSubmit = (data) => {
+    console.log("Data Prediksi:", data);
+    setIsModalOpen(false);
+    // Tambahkan logika pengiriman data ke server atau pemrosesan di sini
+  };
+
   return (
     <div>
       <Header />
@@ -18,15 +26,23 @@ function Prediction() {
             Dapatkan insight terkini mengenai tren harga beras
           </p>
         </div>
-        <Link to="/prediction">
-          <div className="bg-gray-800 text-cyan-300 py-4 px-8 rounded-full flex gap-4 items-center">
-            <FaPlus size={20} />
-            <p className="text-base font-semibold">Prediksi</p>
-          </div>
-        </Link>
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="bg-gray-800 text-cyan-300 py-4 px-8 rounded-full flex gap-4 items-center hover:bg-gray-700"
+        >
+          <FaPlus size={20} />
+          <p className="text-base font-semibold">Prediksi</p>
+        </button>
       </div>
 
       <Chart />
+
+      {/* Modal untuk Prediksi */}
+      <ModalForm
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onSubmit={handleModalSubmit}
+      />
     </div>
   );
 }

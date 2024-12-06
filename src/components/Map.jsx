@@ -29,7 +29,7 @@ const Map = () => {
         <ComposableMap
           projection="geoMercator"
           projectionConfig={{
-            scale: 1800,
+            scale: 1600,
             center: [118, -3],
           }}
           style={{
