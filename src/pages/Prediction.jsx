@@ -6,11 +6,33 @@ import ModalForm from "../components/ModalForm";
 
 function Prediction() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [predictedData, setPredictedData] = useState([]);
 
-  const handleModalSubmit = (data) => {
-    console.log("Data Prediksi:", data);
+  const handleModalSubmit = async (data) => {
     setIsModalOpen(false);
-    // Tambahkan logika pengiriman data ke server atau pemrosesan di sini
+
+    try {
+      const response = await fetch(
+        "https://gusssatria.us-east-1.aws.modelbit.com/v1/predict_harga/latest",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ data: parseInt(data.weeks) }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log("Hasil Prediksi:", result);
+      setPredictedData(result); 
+    } catch (error) {
+      console.error("Error saat mengirim data ke API:", error);
+    }
   };
 
   return (
@@ -35,9 +57,8 @@ function Prediction() {
         </button>
       </div>
 
-      <Chart />
+      <Chart predictedData={predictedData} />
 
-      {/* Modal untuk Prediksi */}
       <ModalForm
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

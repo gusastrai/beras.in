@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,6 +10,7 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
+import hargaBerasData from "../data/harga_beras.json";
 
 ChartJS.register(
   CategoryScale,
@@ -21,43 +22,69 @@ ChartJS.register(
   Legend
 );
 
-const Chart = () => {
-  const labels = [
-    "1 Jan",
-    "7 Jan",
-    "14 Jan",
-    "21 Jan",
-    "28 Jan",
-    "4 Feb",
-    "11 Feb",
-    "18 Feb",
-    "25 Feb",
-    "4 Mar",
-    "11 Mar",
-    "18 Mar",
-    "25 Mar",
-  ];
+const Chart = ({ predictedData }) => {
+  const [chartData, setChartData] = useState({ labels: [], datasets: [] });
 
-  const data = {
-    labels,
-    datasets: [
-      {
-        data: [
-          12000, 12200, 12400, 12600, 12800, 13000, 13200, 13400, 13500, 13800,
-          14000, 14200, 14500,
-        ],
-        borderColor: "rgb(6, 182, 212)",
-        backgroundColor: "rgb(6, 182, 212)",
-        showLine: true,
-        fill: false,
-        pointRadius: 1,
-        pointHoverRadius: 10,
-        pointHoverBackgroundColor: "#ffffff",
-        pointHoverBorderColor: "rgb(6, 182, 212)",
-        pointHoverBorderWidth: 5,
-      },
-    ],
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
   };
+
+  useEffect(() => {
+    const labels = hargaBerasData.Sheet1.map(
+      (item) => item["Tanggal Pencatatan"]
+    );
+
+    const actualHarga = hargaBerasData.Sheet1.map((item) =>
+      parseFloat(item["Harga"].replace(",", ""))
+    );
+
+    const predictedLabels = [];
+    const predictedHarga = [];
+
+    if (predictedData.data) {
+      predictedData.data.forEach((prediction) => {
+        predictedLabels.push(formatDate(prediction.date));
+        predictedHarga.push(prediction.predicted_price);
+      });
+      labels.push(...predictedLabels);
+    }
+
+    setChartData({
+      labels,
+      datasets: [
+        {
+          label: "Harga Aktual",
+          data: actualHarga,
+          borderColor: "rgb(6, 182, 212)",
+          backgroundColor: "rgb(6, 182, 212)",
+          showLine: true,
+          fill: false,
+          pointRadius: 1,
+          pointHoverRadius: 10,
+          pointHoverBackgroundColor: "#ffffff",
+          pointHoverBorderColor: "rgb(6, 182, 212)",
+          pointHoverBorderWidth: 5,
+        },
+        {
+          label: "Harga Prediksi",
+          data: [...actualHarga, ...predictedHarga],
+          borderColor: "rgb(255, 102, 102)",
+          backgroundColor: "rgb(255, 102, 102)",
+          showLine: true,
+          fill: false,
+          pointRadius: 1,
+          pointHoverRadius: 10,
+          pointHoverBackgroundColor: "#ffffff",
+          pointHoverBorderColor: "rgb(6, 182, 212)",
+          pointHoverBorderWidth: 5,
+        },
+      ],
+    });
+  }, [predictedData]);
 
   const options = {
     responsive: true,
@@ -147,7 +174,7 @@ const Chart = () => {
         </p>
       </div>
       <div className="h-[512px] bg-white px-4 py-8 rounded-2xl">
-        <Line data={data} options={options} />
+        <Line data={chartData} options={options} />
       </div>
     </div>
   );

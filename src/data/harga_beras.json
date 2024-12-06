@@ -1,0 +1,529 @@
+{
+  "Sheet1": [
+    {
+      "No": 1,
+      "Tanggal Pencatatan": "10/10/2022",
+      "Harga": "13,550"
+    },
+    {
+      "No": 2,
+      "Tanggal Pencatatan": "17/10/2022",
+      "Harga": "13,500"
+    },
+    {
+      "No": 3,
+      "Tanggal Pencatatan": "24/10/2022",
+      "Harga": "13,500"
+    },
+    {
+      "No": 4,
+      "Tanggal Pencatatan": "31/10/2022",
+      "Harga": "13,500"
+    },
+    {
+      "No": 5,
+      "Tanggal Pencatatan": "07/11/2022",
+      "Harga": "13,500"
+    },
+    {
+      "No": 6,
+      "Tanggal Pencatatan": "14/11/2022",
+      "Harga": "13,500"
+    },
+    {
+      "No": 7,
+      "Tanggal Pencatatan": "21/11/2022",
+      "Harga": "13,500"
+    },
+    {
+      "No": 8,
+      "Tanggal Pencatatan": "28/11/2022",
+      "Harga": "13,550"
+    },
+    {
+      "No": 9,
+      "Tanggal Pencatatan": "05/12/2022",
+      "Harga": "13,550"
+    },
+    {
+      "No": 10,
+      "Tanggal Pencatatan": "12/12/2022",
+      "Harga": "13,600"
+    },
+    {
+      "No": 11,
+      "Tanggal Pencatatan": "19/12/2022",
+      "Harga": "13,600"
+    },
+    {
+      "No": 12,
+      "Tanggal Pencatatan": "26/12/2022",
+      "Harga": "13,650"
+    },
+    {
+      "No": 13,
+      "Tanggal Pencatatan": "02/01/2023",
+      "Harga": "13,700"
+    },
+    {
+      "No": 14,
+      "Tanggal Pencatatan": "09/01/2023",
+      "Harga": "13,650"
+    },
+    {
+      "No": 15,
+      "Tanggal Pencatatan": "16/01/2023",
+      "Harga": "13,700"
+    },
+    {
+      "No": 16,
+      "Tanggal Pencatatan": "23/01/2023",
+      "Harga": "13,700"
+    },
+    {
+      "No": 17,
+      "Tanggal Pencatatan": "30/01/2023",
+      "Harga": "13,700"
+    },
+    {
+      "No": 18,
+      "Tanggal Pencatatan": "06/02/2023",
+      "Harga": "13,750"
+    },
+    {
+      "No": 19,
+      "Tanggal Pencatatan": "13/02/2023",
+      "Harga": "13,750"
+    },
+    {
+      "No": 20,
+      "Tanggal Pencatatan": "20/02/2023",
+      "Harga": "13,800"
+    },
+    {
+      "No": 21,
+      "Tanggal Pencatatan": "27/02/2023",
+      "Harga": "13,850"
+    },
+    {
+      "No": 22,
+      "Tanggal Pencatatan": "06/03/2023",
+      "Harga": "13,900"
+    },
+    {
+      "No": 23,
+      "Tanggal Pencatatan": "13/03/2023",
+      "Harga": "13,850"
+    },
+    {
+      "No": 24,
+      "Tanggal Pencatatan": "20/03/2023",
+      "Harga": "13,900"
+    },
+    {
+      "No": 25,
+      "Tanggal Pencatatan": "27/03/2023",
+      "Harga": "13,900"
+    },
+    {
+      "No": 26,
+      "Tanggal Pencatatan": "03/04/2023",
+      "Harga": "13,950"
+    },
+    {
+      "No": 27,
+      "Tanggal Pencatatan": "10/04/2023",
+      "Harga": "14,050"
+    },
+    {
+      "No": 28,
+      "Tanggal Pencatatan": "17/04/2023",
+      "Harga": "14,100"
+    },
+    {
+      "No": 29,
+      "Tanggal Pencatatan": "24/04/2023",
+      "Harga": "14,200"
+    },
+    {
+      "No": 30,
+      "Tanggal Pencatatan": "01/05/2023",
+      "Harga": "14,150"
+    },
+    {
+      "No": 31,
+      "Tanggal Pencatatan": "08/05/2023",
+      "Harga": "14,200"
+    },
+    {
+      "No": 32,
+      "Tanggal Pencatatan": "15/05/2023",
+      "Harga": "14,250"
+    },
+    {
+      "No": 33,
+      "Tanggal Pencatatan": "22/05/2023",
+      "Harga": "14,300"
+    },
+    {
+      "No": 34,
+      "Tanggal Pencatatan": "29/05/2023",
+      "Harga": "14,350"
+    },
+    {
+      "No": 35,
+      "Tanggal Pencatatan": "05/06/2023",
+      "Harga": "14,350"
+    },
+    {
+      "No": 36,
+      "Tanggal Pencatatan": "12/06/2023",
+      "Harga": "14,350"
+    },
+    {
+      "No": 37,
+      "Tanggal Pencatatan": "19/06/2023",
+      "Harga": "14,400"
+    },
+    {
+      "No": 38,
+      "Tanggal Pencatatan": "26/06/2023",
+      "Harga": "14,350"
+    },
+    {
+      "No": 39,
+      "Tanggal Pencatatan": "03/07/2023",
+      "Harga": "14,350"
+    },
+    {
+      "No": 40,
+      "Tanggal Pencatatan": "10/07/2023",
+      "Harga": "14,400"
+    },
+    {
+      "No": 41,
+      "Tanggal Pencatatan": "17/07/2023",
+      "Harga": "14,400"
+    },
+    {
+      "No": 42,
+      "Tanggal Pencatatan": "24/07/2023",
+      "Harga": "14,400"
+    },
+    {
+      "No": 43,
+      "Tanggal Pencatatan": "31/07/2023",
+      "Harga": "14,400"
+    },
+    {
+      "No": 44,
+      "Tanggal Pencatatan": "07/08/2023",
+      "Harga": "14,400"
+    },
+    {
+      "No": 45,
+      "Tanggal Pencatatan": "14/08/2023",
+      "Harga": "14,400"
+    },
+    {
+      "No": 46,
+      "Tanggal Pencatatan": "21/08/2023",
+      "Harga": "14,400"
+    },
+    {
+      "No": 47,
+      "Tanggal Pencatatan": "28/08/2023",
+      "Harga": "14,400"
+    },
+    {
+      "No": 48,
+      "Tanggal Pencatatan": "04/09/2023",
+      "Harga": "14,500"
+    },
+    {
+      "No": 49,
+      "Tanggal Pencatatan": "11/09/2023",
+      "Harga": "14,600"
+    },
+    {
+      "No": 50,
+      "Tanggal Pencatatan": "18/09/2023",
+      "Harga": "14,700"
+    },
+    {
+      "No": 51,
+      "Tanggal Pencatatan": "25/09/2023",
+      "Harga": "14,700"
+    },
+    {
+      "No": 52,
+      "Tanggal Pencatatan": "02/10/2023",
+      "Harga": "14,800"
+    },
+    {
+      "No": 53,
+      "Tanggal Pencatatan": "09/10/2023",
+      "Harga": "14,850"
+    },
+    {
+      "No": 54,
+      "Tanggal Pencatatan": "16/10/2023",
+      "Harga": "14,850"
+    },
+    {
+      "No": 55,
+      "Tanggal Pencatatan": "23/10/2023",
+      "Harga": "14,900"
+    },
+    {
+      "No": 56,
+      "Tanggal Pencatatan": "30/10/2023",
+      "Harga": "14,900"
+    },
+    {
+      "No": 57,
+      "Tanggal Pencatatan": "06/11/2023",
+      "Harga": "14,800"
+    },
+    {
+      "No": 58,
+      "Tanggal Pencatatan": "13/11/2023",
+      "Harga": "14,800"
+    },
+    {
+      "No": 59,
+      "Tanggal Pencatatan": "20/11/2023",
+      "Harga": "14,850"
+    },
+    {
+      "No": 60,
+      "Tanggal Pencatatan": "27/11/2023",
+      "Harga": "14,850"
+    },
+    {
+      "No": 61,
+      "Tanggal Pencatatan": "04/12/2023",
+      "Harga": "15,100"
+    },
+    {
+      "No": 62,
+      "Tanggal Pencatatan": "11/12/2023",
+      "Harga": "14,850"
+    },
+    {
+      "No": 63,
+      "Tanggal Pencatatan": "18/12/2023",
+      "Harga": "14,750"
+    },
+    {
+      "No": 64,
+      "Tanggal Pencatatan": "25/12/2023",
+      "Harga": "14,750"
+    },
+    {
+      "No": 65,
+      "Tanggal Pencatatan": "01/01/2024",
+      "Harga": "14,850"
+    },
+    {
+      "No": 66,
+      "Tanggal Pencatatan": "08/01/2024",
+      "Harga": "14,900"
+    },
+    {
+      "No": 67,
+      "Tanggal Pencatatan": "15/01/2024",
+      "Harga": "15,000"
+    },
+    {
+      "No": 68,
+      "Tanggal Pencatatan": "22/01/2024",
+      "Harga": "15,000"
+    },
+    {
+      "No": 69,
+      "Tanggal Pencatatan": "29/01/2024",
+      "Harga": "15,050"
+    },
+    {
+      "No": 70,
+      "Tanggal Pencatatan": "05/02/2024",
+      "Harga": "15,100"
+    },
+    {
+      "No": 71,
+      "Tanggal Pencatatan": "12/02/2024",
+      "Harga": "15,100"
+    },
+    {
+      "No": 72,
+      "Tanggal Pencatatan": "19/02/2024",
+      "Harga": "15,150"
+    },
+    {
+      "No": 73,
+      "Tanggal Pencatatan": "26/02/2024",
+      "Harga": "15,300"
+    },
+    {
+      "No": 74,
+      "Tanggal Pencatatan": "04/03/2024",
+      "Harga": "15,500"
+    },
+    {
+      "No": 75,
+      "Tanggal Pencatatan": "11/03/2024",
+      "Harga": "15,550"
+    },
+    {
+      "No": 76,
+      "Tanggal Pencatatan": "18/03/2024",
+      "Harga": "15,600"
+    },
+    {
+      "No": 77,
+      "Tanggal Pencatatan": "25/03/2024",
+      "Harga": "15,700"
+    },
+    {
+      "No": 78,
+      "Tanggal Pencatatan": "01/04/2024",
+      "Harga": "15,650"
+    },
+    {
+      "No": 79,
+      "Tanggal Pencatatan": "08/04/2024",
+      "Harga": "15,700"
+    },
+    {
+      "No": 80,
+      "Tanggal Pencatatan": "15/04/2024",
+      "Harga": "15,700"
+    },
+    {
+      "No": 81,
+      "Tanggal Pencatatan": "22/04/2024",
+      "Harga": "15,700"
+    },
+    {
+      "No": 82,
+      "Tanggal Pencatatan": "29/04/2024",
+      "Harga": "15,750"
+    },
+    {
+      "No": 83,
+      "Tanggal Pencatatan": "06/05/2024",
+      "Harga": "15,700"
+    },
+    {
+      "No": 84,
+      "Tanggal Pencatatan": "13/05/2024",
+      "Harga": "15,700"
+    },
+    {
+      "No": 85,
+      "Tanggal Pencatatan": "20/05/2024",
+      "Harga": "15,700"
+    },
+    {
+      "No": 86,
+      "Tanggal Pencatatan": "27/05/2024",
+      "Harga": "15,700"
+    },
+    {
+      "No": 87,
+      "Tanggal Pencatatan": "03/06/2024",
+      "Harga": "15,750"
+    },
+    {
+      "No": 88,
+      "Tanggal Pencatatan": "10/06/2024",
+      "Harga": "15,700"
+    },
+    {
+      "No": 89,
+      "Tanggal Pencatatan": "17/06/2024",
+      "Harga": "15,600"
+    },
+    {
+      "No": 90,
+      "Tanggal Pencatatan": "24/06/2024",
+      "Harga": "15,600"
+    },
+    {
+      "No": 91,
+      "Tanggal Pencatatan": "01/07/2024",
+      "Harga": "15,650"
+    },
+    {
+      "No": 92,
+      "Tanggal Pencatatan": "08/07/2024",
+      "Harga": "15,550"
+    },
+    {
+      "No": 93,
+      "Tanggal Pencatatan": "15/07/2024",
+      "Harga": "15,600"
+    },
+    {
+      "No": 94,
+      "Tanggal Pencatatan": "22/07/2024",
+      "Harga": "15,600"
+    },
+    {
+      "No": 95,
+      "Tanggal Pencatatan": "29/07/2024",
+      "Harga": "15,650"
+    },
+    {
+      "No": 96,
+      "Tanggal Pencatatan": "05/08/2024",
+      "Harga": "15,600"
+    },
+    {
+      "No": 97,
+      "Tanggal Pencatatan": "12/08/2024",
+      "Harga": "15,650"
+    },
+    {
+      "No": 98,
+      "Tanggal Pencatatan": "19/08/2024",
+      "Harga": "15,600"
+    },
+    {
+      "No": 99,
+      "Tanggal Pencatatan": "26/08/2024",
+      "Harga": "15,600"
+    },
+    {
+      "No": 100,
+      "Tanggal Pencatatan": "02/09/2024",
+      "Harga": "16,050"
+    },
+    {
+      "No": 101,
+      "Tanggal Pencatatan": "09/09/2024",
+      "Harga": "15,550"
+    },
+    {
+      "No": 102,
+      "Tanggal Pencatatan": "16/09/2024",
+      "Harga": "15,550"
+    },
+    {
+      "No": 103,
+      "Tanggal Pencatatan": "23/09/2024",
+      "Harga": "15,600"
+    },
+    {
+      "No": 104,
+      "Tanggal Pencatatan": "30/09/2024",
+      "Harga": "15,550"
+    },
+    {
+      "No": 105,
+      "Tanggal Pencatatan": "07/10/2024",
+      "Harga": "15,600"
+    }
+  ]
+}
