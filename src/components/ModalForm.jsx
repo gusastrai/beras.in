@@ -6,7 +6,7 @@ const ModalForm = ({ isOpen, onClose, onSubmit }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 sm:px-0 px-4">
       <div className="bg-zinc-100 rounded-2xl shadow-lg p-4 max-w-md w-full">
         <div className="bg-white rounded-2xl p-4">
           <h2 className="text-lg font-semibold text-gray-800">

@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       <div className="flex flex-1 w-full min-h-screen flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-b from-slate-800  to-cyan-700">
-        <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-gray-300 sm:text-7xl">
+        <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-gray-300 sm:text-5xl md:text-6xl lg:text-7xl">
           Maksimalkan Potensi Pertanian Dengan
           {" "}
           <span className="relative whitespace-nowrap text-cyan-300">

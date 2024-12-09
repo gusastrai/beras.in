@@ -168,7 +168,7 @@ const Chart = ({ predictedData }) => {
   return (
     <div className="bg-zinc-100 rounded-2xl p-4 flex flex-col gap-y-4 my-8">
       <div>
-        <p className="text-lg font-semibold text-gray-700">Tren Harga Beras</p>
+        <p className="text-lg font-semibold text-gray-700">Tren Harga Beras di Indonesia</p>
         <p className="text-sm">
           Pantau pergerakan harga beras dalam 3 bulan terakhir untuk membantu
           Anda mengambil keputusan yang tepat.

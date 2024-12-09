@@ -1,21 +1,70 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
-import { FaPlus } from "react-icons/fa";
+import axios from "axios";
+import ModalError from "../components/ModalError";
+import LoadingModal from "../components/LoadingModal";
+import FileUpload from "../components/FileUpload";
+import ResultDisplay from "../components/ResultDisplay";
 
-const Classification = () => {
+const Identification = () => {
   const [selectedFile, setSelectedFile] = useState(null);
+  const [identificationResult, setIdentificationResult] = useState(null);
+  const [error, setError] = useState(null);
+  const [showForm, setShowForm] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
+    setError(null);
+    setIdentificationResult(null);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    if (selectedFile) {
-      console.log("File uploaded:", selectedFile.name);
-    } else {
-      console.log("No file selected");
+    setError(null);
+
+    if (!selectedFile) {
+      setError("Harap pilih file terlebih dahulu");
+      setIsModalOpen(true);
+      return;
     }
+
+    const formData = new FormData();
+    formData.append("image", selectedFile);
+
+    setIsLoading(true);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5001/identify",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      setIdentificationResult({ ...response.data, selectedFile });
+      setShowForm(false);
+    } catch (error) {
+      console.error("Error:", error);
+      setError("Tidak dapat terhubung ke server");
+      setIsModalOpen(true);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleReset = () => {
+    setSelectedFile(null);
+    setIdentificationResult(null);
+    setError(null);
+    setShowForm(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -24,64 +73,36 @@ const Classification = () => {
 
       <div className="flex justify-between items-center mb-8">
         <div>
-          <h1 className="text-4xl font-semibold py-2 text-gray-800">
+          <h1 className="text-2xl sm:text-4xl font-semibold py-2 text-gray-800">
             Identifikasi Kualitas Beras
           </h1>
-          <p className="text-lg font-medium text-gray-500">
+          <p className="text-sm sm:text-lg font-medium text-gray-500">
             Analisis kualitas beras dengan cepat dan akurat untuk memastikan
             hasil terbaik dalam pengolahan atau penjualan.
           </p>
         </div>
       </div>
 
-      <div className="flex flex-col gap-4 bg-zinc-100 p-4 rounded-2xl">
-        <div>
-          <p className="text-lg font-semibold text-gray-700">Upload Gambar</p>
-          <p className="text-sm">
-            Unggah gambar beras yang ingin Anda identifikasi kualitasnya.
-            Pastikan gambar yang diunggah memiliki kualitas yang baik.
-          </p>
-        </div>
+      {isLoading && <LoadingModal />}
 
-        <div className="flex flex-col gap-4 bg-white p-4 rounded-2xl">
-          {selectedFile && (
-            <div className="text-gray-600 flex flex-col items-center gap-4">
-              <p>
-                File yang dipilih: <strong>{selectedFile.name}</strong>
-              </p>
-              <img
-                src={URL.createObjectURL(selectedFile)}
-                alt="Preview"
-                className="w-1/2 h-auto object-fit rounded-lg border border-gray-300"
-              />
-            </div>
-          )}
-          <form onSubmit={handleSubmit} className="">
-            <div>
-              <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer hover:bg-gray-50 transition-all">
-                <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                  <FaPlus className="w-8 h-8 mb-2 text-gray-500" />
-                  <p className="text-sm text-gray-500">Upload Image</p>
-                </div>
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={handleFileChange}
-                  className="hidden"
-                />
-              </label>
-              <button
-                type="submit"
-                className="block w-full mt-4 py-2 px-6 text-cyan-300 bg-gray-800 hover:bg-gray-700 p-3 rounded-full cursor-pointer transition-all duration-300 font-semibold"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
+      {showForm ? (
+        <FileUpload
+          selectedFile={selectedFile}
+          handleFileChange={handleFileChange}
+          handleSubmit={handleSubmit}
+          type="identification"
+        />
+      ) : (
+        <ResultDisplay
+          result={identificationResult}
+          handleReset={handleReset}
+          type="identification"
+        />
+      )}
+
+      <ModalError isOpen={isModalOpen} onClose={closeModal} message={error} />
     </div>
   );
-}
+};
 
-export default Classification;
+export default Identification;

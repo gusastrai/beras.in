@@ -1,12 +1,12 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const SidebarLink = ({ to, icon: Icon, altText }) => {
+const SidebarLink = ({ to, icon: Icon }) => {
   const location = useLocation();
   const isActive = location.pathname === to;
 
   return (
-    <li>
+    <li className="list-none">
       <Link to={to}>
         <div 
           className={`
@@ -17,7 +17,8 @@ const SidebarLink = ({ to, icon: Icon, altText }) => {
             }
           `}
         >
-          <Icon size={20} />
+          <Icon className="block sm:hidden" size={18} />
+          <Icon className="hidden sm:block" size={20} />
         </div>
       </Link>
     </li>

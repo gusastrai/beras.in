@@ -60,20 +60,21 @@ function Prediction() {
       
       <Header />
 
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex sm:flex-row flex-col justify-between items-center mb-8 gap-y-4">
         <div>
-          <h1 className="text-4xl font-semibold py-2 text-gray-800">
+          <h1 className="text-2xl sm:text-4xl font-semibold py-2 text-gray-800">
             Prediksi Harga Beras
           </h1>
-          <p className="text-lg font-medium text-gray-500">
+          <p className="text-sm sm:text-lg font-medium text-gray-500">
             Dapatkan insight terkini mengenai tren harga beras
           </p>
         </div>
         <button
           onClick={() => setIsModalOpen(true)}
-          className="bg-gray-800 text-cyan-300 py-4 px-8 rounded-full flex gap-4 items-center hover:bg-gray-700"
+          className="bg-gray-800 text-cyan-300 py-2 sm:py-4 px-8 rounded-full flex gap-4 items-center hover:bg-gray-700 sm:w-auto w-full justify-center"
         >
-          <FaPlus size={20} />
+          <FaPlus className="block sm:hidden" size={16} />
+          <FaPlus className="hidden sm:block" size={20} />
           <p className="text-base font-semibold">Prediksi</p>
         </button>
       </div>
