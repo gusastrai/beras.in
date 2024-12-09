@@ -60,7 +60,7 @@ function Prediction() {
       
       <Header />
 
-      <div className="flex sm:flex-row flex-col justify-between items-center mb-8 gap-y-4">
+      <div className="flex sm:flex-row flex-col justify-between items-start mb-8 gap-y-4">
         <div>
           <h1 className="text-2xl sm:text-4xl font-semibold py-2 text-gray-800">
             Prediksi Harga Beras
@@ -71,7 +71,7 @@ function Prediction() {
         </div>
         <button
           onClick={() => setIsModalOpen(true)}
-          className="bg-gray-800 text-cyan-300 py-2 sm:py-4 px-8 rounded-full flex gap-4 items-center hover:bg-gray-700 sm:w-auto w-full justify-center"
+          className="bg-gray-800 text-cyan-300 py-2 sm:py-4 px-8 rounded-full flex gap-4 items-center hover:bg-gray-700 sm:w-auto w-full justify-center mt-4"
         >
           <FaPlus className="block sm:hidden" size={16} />
           <FaPlus className="hidden sm:block" size={20} />

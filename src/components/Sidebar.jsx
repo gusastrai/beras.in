@@ -15,7 +15,7 @@ import SidebarLink from "./SidebarLink";
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
     <div
-      className={`h-screen flex flex-col items-center px-2 sm:px-4 py-4 sm:py-8 flex-shrink-0 ${
+      className={`h-screen flex flex-col items-center ps-2 sm:px-4 py-4 sm:py-8 flex-shrink-0 ${
         isOpen ? "block" : "hidden"
       } sm:flex`}
     >
