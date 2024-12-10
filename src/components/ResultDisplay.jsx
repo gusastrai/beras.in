@@ -30,7 +30,7 @@ const ResultDisplay = ({ result, handleReset, type }) => (
           </>
         ) : (
           <>
-            <div className="flex gap-4">
+            <div className="flex sm:flex-row flex-col gap-4">
               <p>
                 Persentase Butir kepala:{" "}
                 <strong className="text-cyan-500">

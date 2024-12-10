@@ -9,7 +9,6 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import LogoImg from "../assets/images/rice.png";
-import { Link } from "react-router-dom";
 import SidebarLink from "./SidebarLink";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {

@@ -15,9 +15,12 @@ const FileUpload = ({ selectedFile, handleFileChange, handleSubmit, type }) => (
 
     <div className="flex flex-col gap-4 bg-white p-4 rounded-2xl">
       {selectedFile && (
-        <div className="text-gray-600 flex flex-col items-center gap-4">
+        <div className="text-gray-600 flex flex-col items-center gap-4 overflow-hidden">
           <p>
-            File yang dipilih: <strong>{selectedFile.name}</strong>
+            File yang dipilih: 
+          </p>
+          <p className="font-bold">
+            {selectedFile.name}
           </p>
           <img
             src={URL.createObjectURL(selectedFile)}

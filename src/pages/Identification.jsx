@@ -37,7 +37,7 @@ const Identification = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5001/identify",
+        "https://guss2408-identification-berasin-flask.hf.space/identify",
         formData,
         {
           headers: {
