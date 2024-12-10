@@ -37,7 +37,7 @@ const Classification = () => {
 
     try {
       const response = await axios.post(
-        "https://precious-billie-bagus08-32743caa.koyeb.app/predict",
+        "https://guss2408-classification-berasin-flask.hf.space/predict",
         formData,
         {
           headers: {
